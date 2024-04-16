@@ -12,4 +12,14 @@ const Register = TryCatch(async (req, res) => {
   });
 });
 
-export const UserController = { Register };
+const Login = TryCatch(async (req, res) => {
+  const token = await UserServices.Login(req.body);
+
+  SendSuccessResponse(res, {
+    status: 200,
+    message: 'Login Successful',
+    data: { token },
+  });
+});
+
+export const UserController = { Register, Login };

@@ -10,6 +10,13 @@ const Register = z.object({
     .email({ message: 'Provide a valid email' }),
 });
 
-export const UserValidation = { Register };
+const Login = z.object({
+  email: z
+    .string({ required_error: 'Email is required' })
+    .email({ message: 'Provide a valid email' }),
+});
+
+export const UserValidation = { Register, Login };
 
 export type TRegisterPayload = z.infer<typeof Register>;
+export type TLoginPayload = z.infer<typeof Login>;
