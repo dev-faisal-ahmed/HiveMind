@@ -25,4 +25,18 @@ const UpdateComment = TryCatch(async (req, res) => {
   });
 });
 
-export const CommentController = { AddComment, UpdateComment };
+const RemoveComment = TryCatch(async (req, res) => {
+  const { commentId } = req.params;
+  const deletedStatus = await CommentServices.RemoveComment(
+    req.user,
+    commentId
+  );
+
+  SendSuccessResponse(res, {
+    status: 200,
+    message: 'Comment Deleted Successfully',
+    data: deletedStatus,
+  });
+});
+
+export const CommentController = { AddComment, UpdateComment, RemoveComment };

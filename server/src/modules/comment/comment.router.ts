@@ -19,3 +19,5 @@ CommentRouter.patch(
   ValidationHandler(CommentValidations.UpdateComment),
   CommentController.UpdateComment
 );
+
+CommentRouter.delete('/:commentId', AuthGuard, CommentController.RemoveComment);
