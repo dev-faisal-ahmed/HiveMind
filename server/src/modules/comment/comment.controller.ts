@@ -12,4 +12,17 @@ const AddComment = TryCatch(async (req, res) => {
   });
 });
 
-export const CommentController = { AddComment };
+const UpdateComment = TryCatch(async (req, res) => {
+  const updatedComment = await CommentServices.UpdateComment(
+    req.user,
+    req.body
+  );
+
+  SendSuccessResponse(res, {
+    status: 200,
+    message: 'Comment Updated Successfully',
+    data: updatedComment,
+  });
+});
+
+export const CommentController = { AddComment, UpdateComment };

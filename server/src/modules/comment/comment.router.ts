@@ -12,3 +12,10 @@ CommentRouter.post(
   ValidationHandler(CommentValidations.AddComment),
   CommentController.AddComment
 );
+
+CommentRouter.patch(
+  '/',
+  AuthGuard,
+  ValidationHandler(CommentValidations.UpdateComment),
+  CommentController.UpdateComment
+);
