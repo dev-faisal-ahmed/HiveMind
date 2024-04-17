@@ -1,9 +1,9 @@
 import { SendSuccessResponse } from '../../utils/response.helper';
 import { TryCatch } from '../../utils/try-catch';
-import { UserServices } from './services';
+import { AuthServices } from '../auth/services';
 
 const Register = TryCatch(async (req, res) => {
-  const newUser = await UserServices.Register(req.body);
+  const newUser = await AuthServices.Register(req.body);
 
   SendSuccessResponse(res, {
     status: 200,
@@ -13,7 +13,7 @@ const Register = TryCatch(async (req, res) => {
 });
 
 const Login = TryCatch(async (req, res) => {
-  const token = await UserServices.Login(req.body);
+  const token = await AuthServices.Login(req.body);
 
   SendSuccessResponse(res, {
     status: 200,
@@ -22,4 +22,4 @@ const Login = TryCatch(async (req, res) => {
   });
 });
 
-export const UserController = { Register, Login };
+export const AuthController = { Register, Login };

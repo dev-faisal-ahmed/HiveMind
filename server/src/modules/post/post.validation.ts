@@ -9,7 +9,7 @@ const CreatePost = z.object({
   communityId: z.string().optional(),
   description: z.string().optional(),
   image: z.string().optional(),
-  PostStatus: z.enum([...(PostStatus as [string, ...string[]])]),
+  postStatus: z.enum([...(PostStatus as [string, ...string[]])]),
 });
 
 export const PostValidation = { CreatePost };

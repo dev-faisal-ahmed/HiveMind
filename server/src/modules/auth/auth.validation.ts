@@ -16,7 +16,7 @@ const Login = z.object({
     .email({ message: 'Provide a valid email' }),
 });
 
-export const UserValidation = { Register, Login };
+export const AuthValidation = { Register, Login };
 
 export type TRegisterPayload = z.infer<typeof Register>;
 export type TLoginPayload = z.infer<typeof Login>;

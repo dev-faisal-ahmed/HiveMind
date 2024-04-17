@@ -1,6 +1,6 @@
 import { AppError } from '../../../utils/app-error';
-import { User } from '../user.model';
-import { TRegisterPayload } from '../user.validation';
+import { User } from '../../user/user.model';
+import { TRegisterPayload } from '../../user/user.validation';
 
 export const Register = async (payload: TRegisterPayload) => {
   // checking if user already exist or not
