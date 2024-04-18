@@ -1,5 +1,5 @@
-import { AppError } from '../../../utils/app-error';
-import { TUser } from '../../user/user.interface';
+import { AppError } from '../../../../utils/app-error';
+import { TUser } from '../../../user/user.interface';
 import { Upvote } from '../upvote.model';
 
 export const RemoveUpvote = async (user: TUser, upvoteId: string) => {

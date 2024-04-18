@@ -1,6 +1,6 @@
-import { AppError } from '../../../utils/app-error';
-import { Post } from '../../post/post.model';
-import { TUser } from '../../user/user.interface';
+import { AppError } from '../../../../utils/app-error';
+import { TUser } from '../../../user/user.interface';
+import { Post } from '../../post.model';
 import { Comment } from '../comment.model';
 import { TAddCommentPayload } from '../comment.validation';
 

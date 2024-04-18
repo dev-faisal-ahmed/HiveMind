@@ -1,5 +1,5 @@
-import { SendSuccessResponse } from '../../utils/response.helper';
-import { TryCatch } from '../../utils/try-catch';
+import { SendSuccessResponse } from '../../../utils/response.helper';
+import { TryCatch } from '../../../utils/try-catch';
 import { UpvoteServices } from './services';
 
 const AddOrUpdateUpvote = TryCatch(async (req, res) => {

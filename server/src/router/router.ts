@@ -1,8 +1,8 @@
 import { Router } from 'express';
-import { AuthRouter } from '../modules/auth/auth.router';
+import { AuthRouter } from '../modules/user/auth/auth.router';
 import { PostRouter } from '../modules/post/post.router';
-import { UpvoteRouter } from '../modules/upvote/upvote.router';
-import { CommentRouter } from '../modules/comment/comment.router';
+import { UpvoteRouter } from '../modules/post/upvote/upvote.router';
+import { CommentRouter } from '../modules/post/comment/comment.router';
 
 export const AppRouter = Router();
 

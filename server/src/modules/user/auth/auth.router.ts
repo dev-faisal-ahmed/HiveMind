@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { AuthValidation } from './auth.validation';
-import { ValidationHandler } from '../../middleware/validation.handler';
 import { AuthController } from './auth.controller';
+import { ValidationHandler } from '../../../middleware/validation.handler';
 
 export const AuthRouter = Router();
 

@@ -1,5 +1,5 @@
-import { SendSuccessResponse } from '../../utils/response.helper';
-import { TryCatch } from '../../utils/try-catch';
+import { SendSuccessResponse } from '../../../utils/response.helper';
+import { TryCatch } from '../../../utils/try-catch';
 import { CommentServices } from './services';
 
 const AddComment = TryCatch(async (req, res) => {

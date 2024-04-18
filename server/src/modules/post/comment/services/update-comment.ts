@@ -1,6 +1,6 @@
-import { AppError } from '../../../utils/app-error';
-import { Picker, isEmptyObject } from '../../../utils/helper';
-import { TUser } from '../../user/user.interface';
+import { AppError } from '../../../../utils/app-error';
+import { Picker, isEmptyObject } from '../../../../utils/helper';
+import { TUser } from '../../../user/user.interface';
 import { CommentFields } from '../comment.constants';
 import { Comment } from '../comment.model';
 import { TUpdateCommentPayload } from '../comment.validation';

@@ -1,8 +1,9 @@
 import { Router } from 'express';
-import { AuthGuard } from '../../middleware/auth-guard';
-import { ValidationHandler } from '../../middleware/validation.handler';
+
 import { CommentValidations } from './comment.validation';
 import { CommentController } from './comment.controller';
+import { ValidationHandler } from '../../../middleware/validation.handler';
+import { AuthGuard } from '../../../middleware/auth-guard';
 
 export const CommentRouter = Router();
 

@@ -1,4 +1,4 @@
-import { TUser } from '../../user/user.interface';
+import { TUser } from '../../../user/user.interface';
 import { TUpvoteType } from '../upvote.interface';
 import { Upvote } from '../upvote.model';
 import { TAddOrUpdateUpvotePayload } from '../upvote.validation';

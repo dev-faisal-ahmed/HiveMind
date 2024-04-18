@@ -1,5 +1,6 @@
-import { AppError } from '../../../utils/app-error';
-import { TUser } from '../../user/user.interface';
+//
+import { AppError } from '../../../../utils/app-error';
+import { TUser } from '../../../user/user.interface';
 import { Comment } from '../comment.model';
 
 export const RemoveComment = async (user: TUser, commentId: string) => {
