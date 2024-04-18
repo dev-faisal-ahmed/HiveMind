@@ -13,9 +13,7 @@ const CreateCommunity = z.object({
     })
     .array()
     .transform((values) => {
-      console.log(values);
-      console.log(values.map((value) => value.toLowerCase()));
-      return values.map((value) => value.toLowerCase());
+      values.map((value) => value.toLowerCase());
     }),
 });
 
