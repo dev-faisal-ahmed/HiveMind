@@ -1,21 +1,21 @@
-import express from 'express';
 import cors from 'cors';
-import { AppRouter } from '../router/router';
-import { GlobalErrorHandler } from '../middleware/global-error.handler';
+import express from 'express';
+import { appRouter } from './router';
+import { globalErrorHandler } from '../middleware';
 
-export const App = express();
+export const app = express();
 
-App.use(express.json());
-App.use(cors());
+app.use(express.json());
+app.use(cors());
 
-App.use('/api', AppRouter);
+app.use('/api/v1', appRouter);
 
-App.get('/', (_, res) => {
+app.get('/', (_, res) => {
   res.status(200).json({ ok: true, message: 'Welcome To HiveMind API' });
 });
 
-App.get('*', (_, res) => {
+app.all('*', (_, res) => {
   res.status(404).json({ ok: false, message: 'This path does not exist' });
 });
 
-App.use(GlobalErrorHandler);
+app.use(globalErrorHandler);
